@@ -1,0 +1,9 @@
+---
+- name: Shutdown all servers
+  hosts: all
+  gather_facts: no
+  become: true
+  become_user: root
+  tasks:
+    - name: shutdown
+      reboot:
